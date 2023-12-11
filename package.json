@@ -1,0 +1,75 @@
+{
+  "name": "@base-stone/react",
+  "license": "MIT",
+  "version": "0.2.5",
+  "author": {
+    "name": "base-stone",
+    "email": "leafront@126.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/base-stone/design-react.git"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "type": "module",
+  "main": "./dist/design-react.es.prod.js",
+  "module": "./dist/design-react.es.prod.js",
+  "exports": {
+    ".": {
+      "import": "./dist/design-react.es.prod.js",
+      "types": "./dist/design-react.es.prod.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "homepage": "https://github.com/base-stone/design-react",
+  "scripts": {
+    "build:prod": "tsc && vite build && node scripts/sassPack.js",
+    "build:publish": "npm run build:prod && npm publish",
+    "build:css": "sudo node sassPack.js",
+    "eslint": "eslint --fix ./src --ext tsx,ts",
+    "prettier": "prettier --write \"./src/**/*.{tsx,ts,scss}\"",
+    "stylelint": "stylelint --fix \"./src/**/*.scss\"",
+    "lint:css:js": "npm run eslint && npm run prettier && npm run stylelint"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.1",
+    "@types/react": "^18.2.39",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "@vitejs/plugin-react": "^4.2.0",
+    "classnames": "^2.3.2",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "postcss": "^8.4.31",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "rollup-plugin-shell": "^1.0.9",
+    "sass": "^1.69.5",
+    "stylelint": "^15.11.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recommended-scss": "^13.1.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-order": "^6.0.3",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.5",
+    "vite-plugin-dts": "^3.6.4"
+  },
+  "dependencies": {
+    "@base-stone/librarys": "^0.1.2",
+    "@base-stone/style": "^0.1.3"
+  }
+}

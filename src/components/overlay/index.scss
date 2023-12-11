@@ -1,0 +1,24 @@
+.ui-overlay-container {
+  position: fixed;
+  z-index: 1000;
+}
+
+.ui-overlay-container-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ui-overlay-container-center-active {
+  animation: scaleIn 0.4s;
+}
+
+.ui-overlay-container-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.ui-overlay-container-bottom-active {
+  animation: slideUp 0.4s;
+}
