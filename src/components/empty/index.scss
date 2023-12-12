@@ -9,7 +9,7 @@
   .ui-empty-pic {
     width: 340px;
     height: 340px;
-    background-image: url('/static/images/empty-bg.png?v=202309181811');
+    background-image: url(var(--static-path) + '/images/empty-bg.png?v=202309181811');
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
