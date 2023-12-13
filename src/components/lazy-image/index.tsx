@@ -1,4 +1,4 @@
-import { useEffect, FC, createRef, RefObject, memo } from 'react'
+import { useEffect, FC, useRef, RefObject, memo } from 'react'
 import { throttle } from '@base-stone/librarys'
 
 interface Props {
@@ -7,7 +7,9 @@ interface Props {
 const LazyImage: FC<Props> = memo((props) => {
   const { src } = props
 
-  const imgRef: RefObject<HTMLDivElement> = createRef()
+  const imgRef: RefObject<HTMLDivElement> = useRef(null)
+  const handleScrollThrottled: any = useRef(null)
+
 
   const handleScroll = () => {
     const el: HTMLDivElement | any = imgRef.current
@@ -22,25 +24,25 @@ const LazyImage: FC<Props> = memo((props) => {
       const image = new Image()
       image.referrerPolicy = 'no-referrer'
       image.src = src
-      image.addEventListener(
-        'load',
-        () => {
-          el.style.background = `url(${src}) no-repeat center top / cover`
-          el.classList.add('ui-lazyLoad-fade')
-        },
-        false
-      )
-      window.removeEventListener('scroll', throttleScroll)
+      const loadImage = () => {
+        el.style.background = `url(${src}) no-repeat center top / cover`
+        el.classList.add('ui-lazy-fade')
+        image.removeEventListener('load', loadImage, false)
+      }
+      image.addEventListener('load', loadImage, false)
+      window.removeEventListener('scroll', handleScrollThrottled.current)
     }
   }
 
-  const throttleScroll = throttle(handleScroll, 500)
+  handleScrollThrottled.current = throttle(handleScroll, 500)
 
   useEffect(() => {
-    window.addEventListener('scroll', throttleScroll)
+    window.addEventListener('scroll', handleScrollThrottled.current)
     handleScroll()
     return () => {
-      window.removeEventListener('scroll', throttleScroll)
+      if (handleScrollThrottled.current) {
+        window.removeEventListener('scroll', handleScrollThrottled.current)
+      }
     }
   }, [])
 
