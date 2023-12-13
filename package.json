@@ -1,7 +1,7 @@
 {
   "name": "@base-stone/react",
   "license": "MIT",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "author": {
     "name": "base-stone",
     "email": "leafront@126.com"
@@ -31,7 +31,7 @@
   "scripts": {
     "build:prod": "tsc && vite build && node scripts/sassPack.js",
     "build:publish": "npm run build:prod && npm publish",
-    "build:css": "sudo node sassPack.js",
+    "build:css": "sudo node scripts/sassPack.js",
     "eslint": "eslint --fix ./src --ext tsx,ts",
     "prettier": "prettier --write \"./src/**/*.{tsx,ts,scss}\"",
     "stylelint": "stylelint --fix \"./src/**/*.scss\"",
@@ -46,8 +46,6 @@
     "@vitejs/plugin-react": "^4.2.0",
     "classnames": "^2.3.2",
     "eslint": "^8.54.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
     "postcss": "^8.4.31",
@@ -70,6 +68,6 @@
   },
   "dependencies": {
     "@base-stone/librarys": "^0.1.2",
-    "@base-stone/style": "^0.1.3"
+    "@base-stone/style": "^0.1.5"
   }
 }
