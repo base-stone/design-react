@@ -21,15 +21,8 @@ const LazyImage: FC<Props> = memo((props) => {
       if (!src) {
         return false
       }
-      const image = new Image()
-      image.referrerPolicy = 'no-referrer'
-      image.src = src
-      const loadImage = () => {
-        el.style.background = `url(${src}) no-repeat center top / cover`
-        el.classList.add('ui-lazy-fade')
-        image.removeEventListener('load', loadImage, false)
-      }
-      image.addEventListener('load', loadImage, false)
+      el.style.background = `url(${src}) no-repeat center top / cover`
+      el.classList.add('ui-lazy-fade')
       window.removeEventListener('scroll', handleScrollThrottled.current)
     }
   }
