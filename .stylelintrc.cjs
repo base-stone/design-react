@@ -1,9 +1,7 @@
 module.exports = {
   extends: [
     'stylelint-config-standard',
-    'stylelint-config-recommended-scss',
-    'stylelint-config-standard-vue',
-    'stylelint-config-prettier'
+    'stylelint-config-recommended-scss'
   ],
   plugins: ['stylelint-order'],
   // 不同格式的文件指定自定义语法
