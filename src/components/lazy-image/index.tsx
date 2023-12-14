@@ -1,45 +1,58 @@
-import { useEffect, FC, useRef, RefObject, memo } from 'react'
+import { useEffect, FC, useRef, memo } from 'react'
 import { throttle } from '@base-stone/librarys'
 
 interface Props {
   src: string
 }
-const LazyImage: FC<Props> = memo((props) => {
-  const { src } = props
 
-  const imgRef: RefObject<HTMLDivElement> = useRef(null)
-  const handleScrollThrottled: any = useRef(null)
+interface Options  {
+  root: null
+  rootMargin: string
+  threshold: number
+}
 
-
-  const handleScroll = () => {
-    const el: HTMLDivElement | any = imgRef.current
-    const top = el.getBoundingClientRect().top
-    const mw = el.offsetWidth
-    const mh = el.offsetHeight
-    const windowHeight = window.innerHeight
-    if (mw != 0 && mh != 0 && top < windowHeight) {
-      if (!src) {
-        return false
-      }
-      el.style.background = `url(${src}) no-repeat center top / cover`
-      el.classList.add('ui-lazy-fade')
-      window.removeEventListener('scroll', handleScrollThrottled.current)
-    }
-  }
-
-  handleScrollThrottled.current = throttle(handleScroll, 500)
+const LazyImage: FC<Props> = memo(({ src }) => {
+  const imgRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScrollThrottled.current)
-    handleScroll()
+    const options: Options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    }
+
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      const handleScrollThrottled = throttle(() => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLDivElement
+            if (!src) {
+              return false
+            }
+            el.style.background = `url(${src}) no-repeat center top / cover`
+            el.classList.add('ui-lazyLoad-fade')
+            observer.unobserve(el)
+          }
+        })
+      }, 500)
+      handleScrollThrottled(entries)
+    }
+
+    const observer = new IntersectionObserver(handleIntersection, options)
+    if (imgRef.current) {
+      observer.observe(imgRef.current)
+    }
+
     return () => {
-      if (handleScrollThrottled.current) {
-        window.removeEventListener('scroll', handleScrollThrottled.current)
+      if (imgRef.current) {
+        observer.unobserve(imgRef.current)
       }
     }
   }, [])
 
-  return <div ref={imgRef} className="ui-lazy-bg"></div>
+  return (
+    <div ref={imgRef} className="ui-lazy-bg"></div>
+  )
 })
 
 export default LazyImage
