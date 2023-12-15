@@ -70,7 +70,7 @@ const showModal = ({ title, content, cancelText, confirmText, success, cancel }:
   }
   const removeElement = () => {
     root.unmount()
-    container.parentNode.removeChild(container)
+    container.remove()
     isClick = true
   }
   const root = createRoot(container)

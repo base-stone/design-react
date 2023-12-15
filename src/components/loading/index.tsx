@@ -45,7 +45,7 @@ export const showLoading = () => {
 export const hideLoading = () => {
   if (!isLoading) {
     root.unmount()
-    container.parentNode.removeChild(container)
+    container.remove()
     isLoading = true
   }
 }

@@ -1,4 +1,4 @@
-import { FC, Fragment, memo } from 'react'
+import { FC, memo } from 'react'
 
 interface Props {
   show: boolean
@@ -8,7 +8,7 @@ interface Props {
 const PageLoading: FC<Props> = memo((props) => {
   const { show, bgColor = 'transparent' } = props
   return (
-    <Fragment>
+    <div>
       {show && (
         <div
           className="ui-loading flex flex-v-center flex-h-center"
@@ -22,7 +22,7 @@ const PageLoading: FC<Props> = memo((props) => {
           <span className="ui-loading__text fs28">加载中...</span>
         </div>
       )}
-    </Fragment>
+    </div>
   )
 })
 

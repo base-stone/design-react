@@ -27,7 +27,7 @@ const showToast = (text: string) => {
   isClick = false
   setTimeout(() => {
     root.unmount()
-    container.parentNode.removeChild(container)
+    container.remove()
     isClick = true
   }, 2000)
 }
