@@ -12,7 +12,7 @@ interface Options  {
 }
 
 const LazyImage: FC<Props> = memo(({ src }) => {
-  const imgRef = useRef<HTMLDivElement>(null)
+  const imgRef = useRef<HTMLDivElement|any>(null)
 
   useEffect(() => {
     const options: Options = {
@@ -30,7 +30,7 @@ const LazyImage: FC<Props> = memo(({ src }) => {
               return false
             }
             el.style.background = `url(${src}) no-repeat center top / cover`
-            el.classList.add('ui-lazyLoad-fade')
+            el.classList.add('ui-lazy-fade')
             observer.unobserve(el)
           }
         })

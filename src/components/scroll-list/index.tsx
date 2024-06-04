@@ -23,9 +23,9 @@ const ScrollList: FC<Props> = memo((props) => {
 
   useEffect(() => {
     const isPassive: any = getPassiveValue()
-    window.removeEventListener('scroll', scrollLoadList, isPassive)
+    window.addEventListener('scroll', scrollLoadList, isPassive)
     return () => {
-      window.addEventListener('scroll', scrollLoadList, isPassive)
+      window.removeEventListener('scroll', scrollLoadList, isPassive)
     }
   }, [])
 

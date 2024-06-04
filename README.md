@@ -1,4 +1,4 @@
-pnpm install -D @base-stone/react
+pnpm add -D @base-stone/react
 https://unpkg.com/@base-stone/react
 
 

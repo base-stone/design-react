@@ -6,7 +6,6 @@ interface ModalProps {
   content: string
   cancelText: string
   confirmText: string
-  confirmColor?: string
   cancelButton?: boolean | undefined
   success?(): void
   cancel?(): void
@@ -19,7 +18,6 @@ const Modal: FC<ModalProps> = memo((props) => {
     cancelText,
     confirmText,
     cancelButton = true,
-    confirmColor = 'var(--text-color)',
     cancel = () => {},
     success = () => {}
   } = props
@@ -51,7 +49,6 @@ const Modal: FC<ModalProps> = memo((props) => {
           )}
           <strong
             className={'tc ' + (!cancelButton ? 'confirm-row' : '')}
-            style={{ background: confirmColor }}
             onClick={successCallback}
           >
             {confirmText}

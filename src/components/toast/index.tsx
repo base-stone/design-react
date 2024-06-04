@@ -5,6 +5,11 @@ interface ToastProps {
   text: string
 }
 
+let isClick = true
+
+const container: any = document.createElement('div')
+
+
 const Toast: FC<ToastProps> = memo(({ text }) => {
   return (
     <div className="ui-toast-mask">
@@ -16,8 +21,6 @@ const Toast: FC<ToastProps> = memo(({ text }) => {
 })
 
 const showToast = (text: string) => {
-  let isClick = true
-  const container: any = document.createElement('div')
   if (!isClick) {
     return
   }

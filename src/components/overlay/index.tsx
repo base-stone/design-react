@@ -29,13 +29,14 @@ const Overlay: FC<Props> = memo((props) => {
   })
 
   return (
-    <div>
+    <>
       {visible && (
-        <div className="ui-mask" onTouchMove={stopPopup} onClick={handleMaskOverlay}>
+        <>
+          <div className="ui-mask" onTouchMove={stopPopup} onClick={handleMaskOverlay}></div>
           <div className={overlayClass}>{children}</div>
-        </div>
+        </>
       )}
-    </div>
+    </>
   )
 })
 
