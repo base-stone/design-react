@@ -1,7 +1,7 @@
 {
   "name": "@base-stone/react",
   "license": "MIT",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": {
     "name": "base-stone",
     "email": "leafront@126.com"
@@ -65,7 +65,7 @@
     "vite-plugin-dts": "^3.6.4"
   },
   "dependencies": {
-    "@base-stone/librarys": "^0.1.2",
+    "@base-stone/utils": "^0.1.2",
     "@base-stone/style": "^0.1.5"
   }
 }

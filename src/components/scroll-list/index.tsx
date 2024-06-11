@@ -1,5 +1,5 @@
 import { FC, memo, ReactNode, useEffect } from 'react'
-import { getFontSize, getPassiveValue, throttle } from '@base-stone/librarys'
+import { getFontSize, getPassiveValue, throttle } from '@base-stone/utils'
 
 interface Props {
   finished: boolean

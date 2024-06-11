@@ -5,12 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@base-stone/librarys':
-    specifier: ^0.1.2
-    version: 0.1.3
   '@base-stone/style':
     specifier: ^0.1.5
     version: 0.1.5
+  '@base-stone/utils':
+    specifier: ^0.1.2
+    version: 0.1.2
 
 devDependencies:
   '@types/node':
@@ -320,12 +320,12 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@base-stone/librarys@0.1.3:
-    resolution: {integrity: sha512-91B1zegSZ13c17O7F7AVnRleMPo9e60aHMkUeZzbBp5+Vn3FsV3x5200xZunfUz9thsajf6ALiQ9sjsLCZRZDA==}
-    dev: false
-
   /@base-stone/style@0.1.5:
     resolution: {integrity: sha512-3qK6uB3A/W0V7ye1gWD+Akzt4bhxYKoXY/hp3yvKR0ioUwRBWs9gSE7urnq5I0TYrz6XKIvWJEO6vwW+8XrnMg==}
+    dev: false
+
+  /@base-stone/utils@0.1.2:
+    resolution: {integrity: sha512-Lc5H+p7Bix4tT48L5KYhgTYLG25ZsH+wBhWUJwb1mE84X2nVZ1Xu0qI5qMf+1XJ0xC6arvxITa35mZyPV+LwfQ==}
     dev: false
 
   /@csstools/css-parser-algorithms@2.3.2(@csstools/css-tokenizer@2.2.1):

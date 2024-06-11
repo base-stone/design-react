@@ -1,5 +1,5 @@
 import { useEffect, FC, useRef, memo } from 'react'
-import { throttle } from '@base-stone/librarys'
+import { throttle } from '@base-stone/utils'
 
 interface Props {
   src: string
