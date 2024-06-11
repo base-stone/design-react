@@ -1,4 +1,4 @@
-.ui-showModal {
+.ui-modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -10,7 +10,7 @@
   animation: scaleIn 0.4s;
 }
 
-.ui-showModal-submit {
+.ui-modal-submit {
   margin-top: 48px;
 
   span,
@@ -35,7 +35,7 @@
   }
 }
 
-.ui-showModal-title {
+.ui-modal-title {
   line-height: 56px;
   margin-bottom: 32px;
 
@@ -44,7 +44,7 @@
   }
 }
 
-.ui-showModal-cont {
+.ui-modal-cont {
   p {
     word-wrap: break-word;
     color: rgb(25 28 28 / 75%);

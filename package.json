@@ -1,7 +1,7 @@
 {
   "name": "@base-stone/react",
   "license": "MIT",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": {
     "name": "base-stone",
     "email": "leafront@126.com"
@@ -38,34 +38,34 @@
     "lint:css:js": "npm run eslint && npm run prettier && npm run stylelint"
   },
   "devDependencies": {
-    "@types/node": "^20.10.1",
-    "@types/react": "^18.2.39",
-    "@types/react-dom": "^18.2.17",
-    "@typescript-eslint/eslint-plugin": "^6.13.1",
-    "@typescript-eslint/parser": "^6.13.1",
-    "@vitejs/plugin-react": "^4.2.0",
-    "classnames": "^2.3.2",
-    "eslint": "^8.54.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.4",
-    "postcss": "^8.4.31",
-    "postcss-pxtorem": "^6.0.0",
-    "prettier": "^3.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.0",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "classnames": "^2.5.1",
+    "eslint": "^9.4.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "postcss": "^8.4.38",
+    "postcss-pxtorem": "^6.1.0",
+    "prettier": "^3.3.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
     "rollup-plugin-shell": "^1.0.9",
-    "sass": "^1.69.5",
-    "stylelint": "^15.11.0",
-    "stylelint-config-recommended-scss": "^13.1.0",
-    "stylelint-config-standard": "^34.0.0",
-    "stylelint-order": "^6.0.3",
-    "typescript": "^5.3.2",
-    "vite": "^5.0.5",
-    "vite-plugin-dts": "^3.6.4"
+    "sass": "^1.77.4",
+    "stylelint": "^16.6.1",
+    "stylelint-config-recommended-scss": "^14.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.13",
+    "vite-plugin-dts": "^3.9.1"
   },
   "dependencies": {
     "@base-stone/utils": "^0.1.2",
-    "@base-stone/style": "^0.1.5"
+    "@base-stone/style": "^0.1.7"
   }
 }

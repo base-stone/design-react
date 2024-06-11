@@ -34,14 +34,14 @@ const Modal: FC<ModalProps> = memo((props) => {
   }
   return (
     <div className="ui-mask" onTouchMove={handleStopPopup}>
-      <div className="ui-showModal plr32 bgfff">
-        <div className="ui-showModal-title tc">
+      <div className="ui-modal plr32 bgfff">
+        <div className="ui-modal-title tc">
           <h5 className="fs36 font-semiBold font-weight">{title}</h5>
         </div>
-        <div className="ui-showModal-cont tc">
+        <div className="ui-modal-cont tc">
           <p className="fs28 lh44" dangerouslySetInnerHTML={{ __html: content }}></p>
         </div>
-        <div className="ui-showModal-submit fs32 flex flex-h-between">
+        <div className="ui-modal-submit fs32 flex flex-h-between">
           {cancelButton && (
             <span className="tc" onClick={cancelCallback}>
               {cancelText}
