@@ -1,4 +1,5 @@
-import { FC, memo } from 'react'
+import type { FC } from 'react'
+import { memo } from 'react'
 import { createRoot } from 'react-dom/client'
 
 interface ToastProps {
@@ -8,7 +9,6 @@ interface ToastProps {
 let isClick = true
 
 const container: any = document.createElement('div')
-
 
 const Toast: FC<ToastProps> = memo(({ text }) => {
   return (

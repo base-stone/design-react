@@ -1,4 +1,5 @@
-import { FC, memo, MouseEvent, ReactNode, TouchEvent } from 'react'
+import type { FC, MouseEvent, ReactNode, TouchEvent } from 'react'
+import { memo } from 'react'
 import classNames from 'classnames'
 
 interface Props {

@@ -1,4 +1,5 @@
-import { FC, memo, TouchEvent } from 'react'
+import type { FC, TouchEvent } from 'react'
+import { memo } from 'react'
 import { createRoot } from 'react-dom/client'
 
 const Loading: FC = memo(() => {

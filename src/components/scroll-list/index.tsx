@@ -1,4 +1,5 @@
-import { FC, memo, ReactNode, useEffect } from 'react'
+import type { FC, ReactNode } from 'react'
+import { memo, useEffect } from 'react'
 import { getFontSize, getPassiveValue, throttle } from '@base-stone/utils'
 
 interface Props {

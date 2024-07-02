@@ -1,18 +1,19 @@
-import { useEffect, FC, useRef, memo } from 'react'
+import type { FC } from 'react'
+import { useEffect, useRef, memo } from 'react'
 import { throttle } from '@base-stone/utils'
 
 interface Props {
   src: string
 }
 
-interface Options  {
+interface Options {
   root: null
   rootMargin: string
   threshold: number
 }
 
 const LazyImage: FC<Props> = memo(({ src }) => {
-  const imgRef = useRef<HTMLDivElement|any>(null)
+  const imgRef = useRef<HTMLDivElement | any>(null)
 
   useEffect(() => {
     const options: Options = {
@@ -50,9 +51,7 @@ const LazyImage: FC<Props> = memo(({ src }) => {
     }
   }, [])
 
-  return (
-    <div ref={imgRef} className="ui-lazy-bg"></div>
-  )
+  return <div ref={imgRef} className="ui-lazy-bg"></div>
 })
 
 export default LazyImage
