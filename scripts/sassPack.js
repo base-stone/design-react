@@ -1,4 +1,6 @@
-import fs from 'fs'
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import * as sass from 'sass'
 import postcss from 'postcss'
 import pxtorem from 'postcss-pxtorem'
@@ -11,7 +13,15 @@ const comment =
   ' * Released under the MIT License.\n' +
   ' */\n'
 
-const compressed = sass.compile('./src/style/index.scss', { style: 'compressed' })
+
+// 手动创建 __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const compressed = sass.compile('./src/style/index.scss', {
+  style: 'compressed', // 压缩输出
+  includePaths: [path.resolve(__dirname, 'node_modules')]
+})
 
 const options = {
   rootValue: 100,

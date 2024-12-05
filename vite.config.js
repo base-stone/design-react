@@ -41,7 +41,7 @@ export default defineConfig({
     lib: {
       entry: 'src/main.ts',
       name: 'DesignReact',
-      fileName: (format: string) => {
+      fileName: (format) => {
         format = format.replace(/umd/, 'global')
         return `design-react.${format}.prod.js`
       },
