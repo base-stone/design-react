@@ -1,5 +1,14 @@
-pnpm add -D @base-stone/react
-https://unpkg.com/@base-stone/react
+# design-react
+
+
+## 安装
+
+```
+
+  pnpm add @st-fed/design-react
+
+```
+
 
 
 ## 常规项目代码目录
