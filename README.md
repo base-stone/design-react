@@ -35,14 +35,7 @@
 │       └── index.tsx
 ├── main.ts
 ├── style
-│   ├── animate.scss
-│   ├── app.scss
-│   ├── color.scss
-│   ├── font.scss
 │   ├── index.scss
-│   ├── layout.scss
-│   ├── reset.scss
-│   └── ui-method.scss
 └── vite-env.d.ts
 ```
 
@@ -104,46 +97,8 @@
   import { Overlay } from '@st-fed/design-react'
   
    <Overlay visible={visible} onChange={(val) => onDownloadRecordVisible(val)}>
-      {!loading && (
-        <div className={style['info-container']}>
-          <div className={classNames('flex flex-v-center', style['info-title'])}>
-            <span className="fs14 c050">查看下载记录</span>
-            <Tooltip title={checkedName}>
-              <strong className="fs14 text-ellipsis">【{checkedName}】</strong>
-            </Tooltip>
-            <div className={style['info-close']} onClick={() => onDownloadRecordVisible(false)}>
-              <i className={style['icon-close']}></i>
-            </div>
-          </div>
-          <div className={style['info-body']}>
-            <div className={style['info-table']}>
-              <div className={classNames('flex flex-v-center', style['info-table-head'])}>
-                <span className="font-500">下载人</span>
-                <span className="font-500 flex-1">下载时间</span>
-              </div>
-              {list.map((item) => (
-                <div key={item.id} className={style['info-table-tr']}>
-                  <span>{item.createUser}</span>
-                  <span>{item.createDate}</span>
-                </div>
-              ))}
-              {!list.length && (
-                <div className="pb10">
-                  <Empty></Empty>
-                </div>
-              )}
-            </div>
-          </div>
-          <div className={classNames('flex flex-v-center flex-h-end', style['info-footer'])}>
-            {list.length ? (
-              <strong onClick={handleExport}>导出记录</strong>
-            ) : (
-              <strong className={style['disabled']}>导出记录</strong>
-            )}
-          </div>
-        </div>
-      )}
-    </Overlay>
+      <div>children</div>
+   </Overlay>
 ```
 
 ##  PageLoading 使用
