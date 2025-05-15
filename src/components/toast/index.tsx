@@ -24,7 +24,7 @@ const showToast = (text: string) => {
   if (!isClick) {
     return
   }
-  document.body.appendChild(container)
+
   const root = createRoot(container)
   root.render(<Toast text={text} />)
   isClick = false
@@ -33,6 +33,7 @@ const showToast = (text: string) => {
     container.remove()
     isClick = true
   }, 2000)
+  document.body.appendChild(container)
 }
 
 export default showToast

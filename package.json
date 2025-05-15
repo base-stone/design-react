@@ -1,17 +1,17 @@
 {
-  "name": "@base-stone/react",
+  "name": "@st-fed/design-react",
   "license": "MIT",
   "version": "0.3.2",
   "author": {
-    "name": "base-stone",
-    "email": "leafront@126.com"
+    "name": "yeliang",
+    "email": "yeliang2426@shengtian.com"
   },
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/base-stone/design-react.git"
+    "url": "git+https://gitlab.stnts.com/nova/design-react.git"
   },
   "files": [
     "dist",
@@ -27,7 +27,7 @@
     },
     "./package.json": "./package.json"
   },
-  "homepage": "https://github.com/base-stone/design-react",
+  "homepage": "https://gitlab.stnts.com/nova/design-react",
   "scripts": {
     "build:prod": "tsc && vite build && node scripts/sassPack.js",
     "build:publish": "npm run build:prod && npm publish",
