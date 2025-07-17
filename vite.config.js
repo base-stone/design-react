@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc'
 import shell from 'rollup-plugin-shell'
 import dts from 'vite-plugin-dts'
 import { version } from './package.json'
@@ -12,7 +12,7 @@ const banner = `/*!
 
 export default defineConfig({
   plugins: [
-    react({ jsxRuntime: 'classic' }),
+    react(),
     shell({
       commands: [
         'rm -rf dist',

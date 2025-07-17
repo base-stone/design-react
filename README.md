@@ -15,25 +15,25 @@
 ```
 ├── components
 │   ├── lazy-image
-│   │   └── index.tsx
+│   │   └── Editor.tsx
 │   ├── loading
 │   │   ├── index.scss
-│   │   └── index.tsx
+│   │   └── Editor.tsx
 │   ├── modal
 │   │   ├── index.scss
-│   │   └── index.tsx
+│   │   └── Editor.tsx
 │   ├── overlay
 │   │   ├── index.scss
-│   │   └── index.tsx
+│   │   └── Editor.tsx
 │   ├── page-loading
 │   │   ├── index.scss
-│   │   └── index.tsx
+│   │   └── Editor.tsx
 │   ├── scroll-list
-│   │   └── index.tsx
+│   │   └── Editor.tsx
 │   └── toast
 │       ├── index.scss
-│       └── index.tsx
-├── main.ts
+│       └── Editor.tsx
+├── main.tsx
 ├── style
 │   ├── index.scss
 └── vite-env.d.ts
